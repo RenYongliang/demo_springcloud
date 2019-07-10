@@ -1,0 +1,13 @@
+server:
+  port: 9997
+
+spring:
+  application:
+    name: demo-consumer
+
+eureka:
+  instance:
+    prefer-ip-address: true #以IP地址注册到服务中心
+  client:
+    service-url:
+      defaultZone: http://localhost:9999/eureka/ # 服务注册中心地址
