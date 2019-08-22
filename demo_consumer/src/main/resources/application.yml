@@ -4,6 +4,18 @@ server:
 spring:
   application:
     name: demo-consumer
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: ryl123
+
+mybatis:
+  mapper-locations: classpath:com\ryl\demo_provider\mapper\xml\*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 eureka:
   instance:
