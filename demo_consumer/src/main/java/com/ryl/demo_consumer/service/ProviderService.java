@@ -14,7 +14,7 @@ public interface ProviderService {
     @GetMapping("user/getUser")
     String getUser(@RequestParam("list") List<Integer> list);
 
-    @PostMapping("/getAll")
+    @PostMapping("user/getAll")
     List<User> getAll();
 
 }

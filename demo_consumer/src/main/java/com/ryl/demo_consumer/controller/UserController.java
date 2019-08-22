@@ -48,6 +48,10 @@ public class UserController {
 //        return restTemplate.postForObject(REMOTE_SERVICE_URL+"/user/getUser2",array,String.class);
 //    }
 
+    @PostMapping("/test")
+    public void testIsolation(){
+        userService.testIsolation();
+    }
 
 
 }

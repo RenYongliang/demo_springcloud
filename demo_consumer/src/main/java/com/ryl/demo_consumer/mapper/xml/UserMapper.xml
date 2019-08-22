@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ryl.demo_consumer.mapper.UserMapper">
+
+    <select id="getAllUser" resultType="com.ryl.demo_consumer.entity.User">
+        SELECT * FROM user
+    </select>
+
+    <insert id="insertUser">
+        INSERT INTO user (name,age) VALUES (#{name},#{age})
+    </insert>
+</mapper>
